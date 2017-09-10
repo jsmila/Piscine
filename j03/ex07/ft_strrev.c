@@ -35,7 +35,8 @@ char *ft_strrev(char *str)
 
 int	main(void)
 {
-	ft_putstr(ft_strrev("etib"));
+	char str[] = "etib";
+	ft_putstr(ft_strrev(str));
 	ft_putchar('\n');
 	return (0);
 }
