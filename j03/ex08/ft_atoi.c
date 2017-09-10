@@ -50,6 +50,6 @@ int	ft_atoi(char *str)
 int	main(void)
 {
 	printf("%d\n", 2147483647 * 2);
-	printf("%d\n", ft_atoi("12345678901"));
+	printf("%c\n", (*str));
 	return (0);
 }
