@@ -19,6 +19,6 @@ int	ft_strlen(char *str)
 
 int	main(void)
 {
-	ft_putnbr(ft_strlen("SKS"));
+	ft_putnbr(ft_strlen(NULL));
 	return (0);
 }
