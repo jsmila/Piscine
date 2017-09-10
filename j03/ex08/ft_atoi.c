@@ -7,29 +7,31 @@ int	ft_atoi(char *str)
 	int	result;
 
 	i = 0;
+	result = 0;
 	while (str[i] != '\0')
 	{
-		while ((str[i] >= 0 && str[i] <= 42 ) || str[i] == ',' ||
-		(str[i] >= 46 && str[i] <= 47) || (str[i] >= 58 &&
-		str[i] <= 127))
+		while (str[i] <= 32)
 			i++;
 		if (str[i] == '-')
+			{
 			signe = -1;
+			i++;
+			}
 		else
 			signe = 1;
 		while (str[i] >= '0' && str[i] <= '9')
 		{
 			result *= 10;
-			result += str[i++] - 48;
-			
+			result += str[i] - '0';
+			i++;	
 		}
+		return (result * signe);	
 	}
-	return (result * signe);
+	return (0);
 }
 
 int	main(void)
-{
-	char str[] = "224466881";
-	printf("%d\n", ft_atoi(str));
+{	
+	printf("%d\n", ft_atoi("-123456789"));
 	return (0);
 }
