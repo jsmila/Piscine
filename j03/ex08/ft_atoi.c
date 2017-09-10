@@ -22,7 +22,7 @@ int	ft_atoi(char *str)
 
 	i = 0;
 	result = 0;
-	if (*str)
+	if (str)
 	{
 		while (str[i] != '\0')
 		{
@@ -45,11 +45,10 @@ int	ft_atoi(char *str)
 		}
 	}
 	return (0);
-}
+	}
 
 int	main(void)
-{
-	printf("%d\n", 2147483647 * 2);
-	printf("%c\n", (*str));
+{	
+	printf("%d\n", ft_atoi("123456"));
 	return (0);
 }
